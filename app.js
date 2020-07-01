@@ -2,10 +2,13 @@ const apiParams = {
   url: 'api.openweathermap.org/data/2.5/weather',
   key: 'f6d45665dd5bc33581575df36c6c6b3d',
   defaultCity: 'Cheboksary,ru',
-  lang: 'en',
+  lang: 'ru',
   units: 'metric'
 }
-const apiCall = `https://${apiParams.url}?q=${apiParams.defaultCity}&appid=${apiParams.key}&units=${apiParams.units}&lang=${apiParams.lang}`
+const apiCall = 
+  `
+    https://${apiParams.url}?q=${apiParams.defaultCity}&appid=${apiParams.key}&units=${apiParams.units}&lang=${apiParams.lang}app.js
+  `
 // const geoCall = `https://${apiParams.url}?lat={lat}&lon={lon}&appid=${apiParams.key}`
 
 const monthNames = [
@@ -153,7 +156,3 @@ function setWind(weather) {
   windDegree.textContent = `${wDir}`
   windSpeed.textContent = `${weather.wind.speed} m/s`
 }
-
-
-
-
